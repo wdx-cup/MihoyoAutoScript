@@ -30,3 +30,7 @@ jobs:
 
       - name: 执行签到任务
         run: python main.py
+      - name: 检查配置文件
+        run: |
+                ls -la config/
+                cat config/config.yaml
