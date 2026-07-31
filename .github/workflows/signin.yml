@@ -24,9 +24,11 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 生成配置文件
+        env:
+          CONFIG_CONTENT: ${{ secrets.CONFIG_YAML }}
         run: |
           mkdir -p config
-          echo "${{ secrets.CONFIG_YAML }}" > config/config.yaml
+          printf '%s\n' "$CONFIG_CONTENT" > config/config.yaml
 
       - name: 执行签到任务
         run: python main.py
