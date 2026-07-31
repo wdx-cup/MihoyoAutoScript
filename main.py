@@ -25,11 +25,8 @@ class StatusCode(Enum):
     CAPTCHA_TRIGGERED = 3
 
 
-def check_github_actions() -> None:
-    """检查是否在GitHub Actions环境运行"""
-    if os.getenv('GITHUB_ACTIONS') == 'true':
-        log.error("请不要在 GitHub Action 运行本项目")
-        exit(0)
+
+   
 
 
 def initialize_config() -> Tuple[bool, Optional[str]]:
@@ -107,7 +104,7 @@ def run_web_activity() -> None:
 
 def main() -> Tuple[int, str]:
     """主执行函数"""
-    check_github_actions()
+    
 
     success, msg = initialize_config()
     if not success:
