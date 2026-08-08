@@ -6,7 +6,7 @@ on:
     # 北京时间 = UTC + 8小时，按需自行修改
     - cron: '30 21 * * *'
   # 开启手动触发按钮，方便测试
-   workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   signin:
