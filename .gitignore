@@ -152,3 +152,6 @@ yaml/
 
 # Nix 编译输出
 result/
+
+# 扫码登录工具生成的二维码图片
+miyoushe_login_qr.png
