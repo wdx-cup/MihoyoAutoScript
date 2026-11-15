@@ -1,5 +1,22 @@
 # 米游社辅助签到
 
+---
+
+### 签到报错「你的 cookie 可能已过期」或「无 Stoken」？
+
+> 登录凭据失效了。用扫码工具重新获取，约 30 秒完成，**不需要抓包、不需要安卓模拟器**。
+
+```bash
+pip install pyyaml qrcode pillow
+export GITHUB_PAT=填你的令牌
+python tools/miyoushe_qr_login.py --repo 你的用户名/MihoyoAutoScript
+```
+
+手机米游社 App 扫码确认后会自动更新 `CONFIG_YAML` secret。
+**详细说明见 [tools/README.md](tools/README.md)**
+
+---
+
 基于 Python3 的米游社辅助签到项目
 
 禁止大范围宣传本项目，谢谢配合
