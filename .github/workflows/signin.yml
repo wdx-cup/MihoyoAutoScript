@@ -32,7 +32,8 @@ jobs:
 
       - name: 执行签到任务
         run: python main.py
-      - name: 检查配置文件
+      # 注意：config/config.yaml 含 cookie 与 stoken，本仓库为公开仓库，
+      # 禁止 cat/echo 该文件内容，否则凭证会写入公开可见的 Actions 日志
+      - name: 检查配置文件（仅列目录，不输出内容）
         run: |
-                ls -la config/
-                cat config/config.yaml
+          ls -la config/
